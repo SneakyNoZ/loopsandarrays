@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowel Vs Consonant</title>
+    <link rel="stylesheet" href="vowel.css">
+</head>
+<body>
+
+    <header>
+        <h1>Vowel Vs Consonant</h1>
+        <h1>Check Console for Result!</h1>
+    </header>
+
+    <code>
+        // Create a JavaScript code that accepts a string of lowercase letters. Print the word followed by how many consonants and vowels it has.<br>
+        // "a", "e", "i", "o", "u" are considered vowels.<br>
+        // Every other letter is considered a consonant.<br>
+        // Hint: Define two variables that keep track of the number of consonants and vowels.<br>
+
+    function countConsonantsAndVowels(str) {<br>
+        const vowels = ['a', 'e', 'i', 'o', 'u'];<br>
+        let numConsonants = 0;<br>
+        let numVowels = 0;<br>
+  
+    for (let i = 0; i < str.length; i++) {<br>
+        const char = str[i].toLowerCase();<br>
+        if (vowels.includes(char)) {<br>
+        numVowels++;<br>
+        } else if (char >= 'a' && char <= 'z') {<br>
+        numConsonants++;<br>
+        }<br>
+    }<br>
+  
+    console.log(`${str} has ${numConsonants} consonants and ${numVowels} vowels`);<br>
+  }<br>
+  
+  countConsonantsAndVowels('hello');<br>
+
+  // Output: "hello has 3 consonants and 2 vowels"<br>
+
+  countConsonantsAndVowels('ukelele');<br>
+
+  // Output: "ukelele has 3 consonants and 4 vowels"<br>
+
+  countConsonantsAndVowels('awesome');<br>
+
+  // Output: "awesome has 3 consonants and 4 vowels"<br>
+
+  countConsonantsAndVowels('onomonopia');<br>
+
+  // Output: "onomonopia has 4 consonants and 6 vowels"<br>
+
+  countConsonantsAndVowels('textbook');<br>
+  
+  // Output: "textbook has 5 consonants and 3 vowels"<br>
+    </code>
+<script src="vowel.js"></script>
+</body>
+</html>

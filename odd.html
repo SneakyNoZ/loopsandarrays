@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Only Odds</title>
+    <link rel="stylesheet" href="odd.css">
+</head>
+<body>
+
+    <header>
+        <h1>Only Odds</h1>
+        <h1>Check Console for Result!</h1>
+    </header>
+
+    <code>
+        // Create a JavaScript code that modifies a copy of an array of numbers and returns a new array with only the odd numbers from the original array.<br>
+// If there is only one odd number in the array, return an array with that single value.<br>
+
+function getOddNumbers(arr) {<br>
+    const oddArr = arr.filter(num => num % 2 !== 0);<br>
+    return oddArr.length === 1 ? oddArr : oddArr.length ? oddArr : [];<br>
+  }<br>
+
+  const arr1 = [2, 4, 6, 8, 11, 20, 15, 22];<br>
+  const arr2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];<br>
+  const arr3 = [70, 42, 55, 81, 21, 91, 34];<br>
+  const arr4 = [2, 4, 6, 8, 10, 11, 12];<br>
+  
+  console.log(getOddNumbers(arr1));<br>
+
+  // Output: [ 11, 15 ]<br>
+
+  console.log(getOddNumbers(arr2));<br>
+  
+  // Output: [ 1, 3, 5, 7, 9 ]<br>
+
+  console.log(getOddNumbers(arr3));<br>
+
+  // Output: [ 55, 81, 21, 91 ]<br>
+
+  console.log(getOddNumbers(arr4));<br> 
+  
+  // Output: [ 11 ]<br>
+    </code>
+
+</body>
+</html>
